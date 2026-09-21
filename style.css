@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.toolbar {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.toolbar button, .toolbar input {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.toolbar button {
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+}
+
+.toolbar button:hover {
+  background-color: #2980b9;
+}
+
+.main-container {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.pdf-wrapper {
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  background-color: white;
+}
+
+/* الشاشتين فوق بعض: الـ PDF تحت والرسم فوقه */
+#pdf-render {
+  display: block;
+}
+
+#draw-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  touch-action: none; /* عشان قلم التاب واللمس يشتغلوا بامتياز */
+}
